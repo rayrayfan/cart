@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="1.js"></script>
+  <title>Document</title>
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Mochiy+Pop+P+One&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form action="http://140.127.196.92:1234/formws5" method="post" name="reg">
+  <h3>您的購物車</h3>
+  <p>來自:
+    <select name="come_from" id="">
+      <option value="TW" selected >台北</option>
+      <option value="US">美國</option>
+      <option value="JP">日本</option>
+      <option value="KR">韓國</option>
+      <option value="HK">香港</option>
+    </select>
+  </p>
+    
+  <p>姓名:
+    <input type="text" name="username" placeholder="必填">   
+  </p>
+   
+    
+  <p>電話:
+    <input type="text" name="phone" placeholder="必填">
+  </p>
+    
+  <p>寄件地址:
+    <input type="text" name="address" placeholder="必填">    
+  </p>
+    
+  <p>性別:
+    <input type="radio" name="sex" value="male">男
+    <input type="radio" name="sex" value="female">女
+    <input type="radio" name="sex" value="others">其他
+  </p>
+  
+  <p>請留下您寶貴的意見</p>
+  <textarea name="coment" id="" cols="30" rows="10"></textarea>
+  
+  <br>
+  
+  <button class="btn btn-primary" type="submit" onclick="return check(this);">送出</button>
+
+  </form>
+  </body>
+</html>
