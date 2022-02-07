@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>register</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-color: rgb(255, 234, 163);
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh
+        }
+
+        .form {
+          display: flex;
+          width: auto;
+          background: #fff;
+          margin: 15px;
+          padding: 25px;
+          border-radius: 25px;
+          box-shadow: 0px 10px 25px 5px #0000000f;
+        }
+
+        h1 {
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .btn-secondary{
+            background-color: rgb(143, 130, 88);
+            border-color: rgb(143, 130, 88);
+        }
+
+    </style>
+  </head>
+
+
+
+
+
+  <body>
+    <div class="container">
+      <div class="form">
+        <form action="cart.html" method="post" name=""reg>
+            <h1>註冊會員</h1>
+            <br>
+            <div>
+                <label for="buyer">購買人全名
+                  <input type="text" class="form-control" name="buyer" placeholder="請輸入中文姓名"></label>
+            </div>
+                
+            <div>
+                <label for="email">購買人E-mail
+                     <input type="text" class="form-control" name="email" ></label>
+            </div>
+
+            <div>
+                <label for="account">使用者名稱
+                    <input type="text" class="form-control" name="account"></label>
+            </div>
+            
+            <div>
+                <label for="password">使用者密碼
+                    <input type="password" class="form-control" name="password" placeholder="請輸入8位數以上"></label>
+            </div>
+            
+            <div>
+                <label for="password_again">再輸入密碼
+                    <input type="password" class="form-control" name="password_again" /></label>
+            </div>
+            
+            <br>
+            <a href="cart.html" class="btn btn-secondary" role="button">送出</a>
+          </form>
+      </div>
+      </div>
+      
+
+
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    function check(){
+      if(reg.username.value == ""){
+        alert("未輸入姓名");
+        return false;
+      }
+      else if(reg.phone.value == ""){
+        alert("未輸入電話");
+        return false;
+      }
+      else if(reg.address.value == ""){
+        alert("未輸入寄件地址");
+        return false;
+      }
+      else if(!reg.sex[0].checked && !reg.sex[1].checked && !reg.sex[2].checked){
+        alert("未選擇性別");
+        return false;
+      }
+      else
+        alert("成功送出");
+        reg.submit();
+      
+    }
+
+
+
+    $("input").keypress(
+      function checkLength () {
+    var value = $(this).val();
+    if (value.length < 8) {
+      $("p").text("密碼太短");
+    } else {
+      $("p").text("");
+    }
+  }
+);
+
+
+$("#submit").click(
+ function checkSame () {
+    var x = $("#password1").val();
+    var y = $("#password2").val();
+    if (x === y) {
+      $("p").text("成功!");
+    } else {
+      $("p").text("密碼不一致");
+    }
+  }
+
+);
+  </body>
+</html>
+
+
